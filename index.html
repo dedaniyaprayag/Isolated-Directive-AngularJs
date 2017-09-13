@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Isolated Directive </title>
+        
+        <!-- CSS Lib -->
+        <link rel = "stylesheet" href = "node_modules/bootstrap/dist/css/bootstrap.min.css" type ="text/css" />
+        <link rel = "stylesheet" href = "css/custom.css" type ="text/css" />
+        
+        <!-- JS Lib -->
+        <script type ="text/javascript" src= "node_modules/jquery/dist/jquery.min.js"> </script>
+        <script type ="text/javascript" src= "node_modules/angular/angular.min.js"> </script>
+        <script type ="text/javascript" src= "controller/IsolatedDireciveController.js"> </script>
+        <script type ="text/javascript" src= "controller/directive/autoSave.js"> </script>
+        
+    </head>
+    <body ng-app = "IsolatedDIrectiveApp" ng-controller = "IsolatedController as isolatedCtrl">
+        <div class = "container">
+            <h3 style = "color : {{status.color}}"> {{status.text}} </h3>
+            <autosave placeholder = "Plese type here" class = "comment form-control" save-url = "http://google.com" save-status = "status"></autosave>
+            {{saveStatus}}
+        </div>
+    </body>
+</html>
